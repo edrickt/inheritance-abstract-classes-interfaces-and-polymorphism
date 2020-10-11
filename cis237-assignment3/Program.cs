@@ -10,6 +10,9 @@ namespace cis237_assignment3
     {
         static void Main(string[] args)
         {
+            UserInterface ui = new UserInterface();
+
+            string input = ui.GetUserInput();
         }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cis237_assignment3
 {
-    class Astromech
+    class Astromech : Utility
     {
     }
 }
