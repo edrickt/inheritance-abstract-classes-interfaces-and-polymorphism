@@ -38,6 +38,10 @@ namespace cis237_assignment3
             get { return material; }
             set { material = value; }
         }
+        public abstract string Model
+        {
+            get;
+        }
         public string Color
         {
             get { return color; }
@@ -50,6 +54,7 @@ namespace cis237_assignment3
         protected virtual void CalculateBaseCost()
         {
             baseCost = DroidCollection.FindMaterialCost(Material);
+            baseCost += DroidCollection.FindModelCost(Model);
         }
         public virtual void CalculateTotalCost()
         {
@@ -63,7 +68,7 @@ namespace cis237_assignment3
             return "BASE COST: $" + baseCost + Environment.NewLine +
                    "TOTAL COST: $" + totalCost + Environment.NewLine +
                    "MATERIAL: " + material + Environment.NewLine +
-                   "COLOR: " + color;
+                   "COLOR: " + color + Environment.NewLine + Environment.NewLine;
         }
 
         // ****************************************
@@ -73,6 +78,8 @@ namespace cis237_assignment3
         {
             this.Material = material;
             this.Color = color;
+
+            CalculateBaseCost();
         }
     }
 }

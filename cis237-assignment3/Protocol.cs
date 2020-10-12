@@ -19,12 +19,10 @@ namespace cis237_assignment3
         public int NumberOfLanguages
         {
             get { return numberOfLanguages; }
-            set { numberOfLanguages = value; }
         }
-        public string Model
+        public override string Model
         {
             get { return model; }
-            set { model = value; }
         }
 
         public override void CalculateTotalCost()
@@ -42,7 +40,7 @@ namespace cis237_assignment3
 
         public Protocol(string material, string color, int numberOfLanguages) : base(material, color)
         {
-            this.NumberOfLanguages = numberOfLanguages;
+            this.numberOfLanguages = numberOfLanguages;
 
             CalculateBaseCost();
         }
