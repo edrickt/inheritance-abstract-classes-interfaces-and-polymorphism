@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Edrick Tamayo
+// Thursday 3:30PM Class
+// 20 Oct 2020
+
+using System;
 
 namespace cis237_assignment3
 {

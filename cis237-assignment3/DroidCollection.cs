@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Edrick Tamayo
+// Thursday 3:30PM Class
+// 20 Oct 2020
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Management.Instrumentation;

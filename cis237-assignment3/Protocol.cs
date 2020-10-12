@@ -1,4 +1,8 @@
-﻿using System;
+﻿// Edrick Tamayo
+// Thursday 3:30PM Class
+// 20 Oct 2020
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,6 +20,11 @@ namespace cis237_assignment3
         {
             get { return numberOfLanguages; }
             set { numberOfLanguages = value; }
+        }
+        public string Model
+        {
+            get { return model; }
+            set { model = value; }
         }
 
         public override void CalculateTotalCost()
