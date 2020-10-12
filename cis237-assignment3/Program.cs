@@ -15,8 +15,9 @@ namespace cis237_assignment3
         static void Main(string[] args)
         {
             UserInterface ui = new UserInterface();
+            IDroid[] myDroids = new IDroid[100];
 
-            string input = ui.GetUserInput();
+
         }
     }
 }

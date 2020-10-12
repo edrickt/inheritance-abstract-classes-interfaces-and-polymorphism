@@ -13,6 +13,7 @@ namespace cis237_assignment3
     class Protocol : Droid
     {
         private const decimal COST_PER_LANGUAGE = 10m;
+
         private string model = "Protocol";
         private int numberOfLanguages; 
 
@@ -23,6 +24,7 @@ namespace cis237_assignment3
         public override string Model
         {
             get { return model; }
+            set { model = value; }
         }
 
         public override void CalculateTotalCost()

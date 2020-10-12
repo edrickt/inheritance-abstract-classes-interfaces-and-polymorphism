@@ -17,11 +17,10 @@ namespace cis237_assignment3
         private const decimal COMPUTER_CON_PRICE = 50.00m;
         private const decimal ARMS_PRICE = 100.00m;
 
+        private string model = "Utility";
         private bool toolBox;
         private bool computerConnection;
         private bool arms;
-        private string model = "Utility";
-        private int numberOfLanguages;
 
         public bool ToolBox
         {
@@ -39,6 +38,7 @@ namespace cis237_assignment3
         public override string Model
         {
             get { return model; }
+            set { model = value; }
         }
 
         public override void CalculateTotalCost()

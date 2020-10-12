@@ -24,16 +24,22 @@ namespace cis237_assignment3
             }
             else if (input == "2")
             {
-                Environment.Exit(0);
+                
                 return "2";
+            }
+            else if (input == "3")
+            {
+                Environment.Exit(0);
+                return "3";
             }
             return "-1";
         }
         private void PrintMenu()
         {
             Console.WriteLine("OPTIONS:");
-            Console.WriteLine("1. Print List");
-            Console.WriteLine("2. EXIT");
+            Console.WriteLine("1. Add Droid");
+            Console.WriteLine("2. Print List");
+            Console.WriteLine("3. Exit");
         }
     }
 }

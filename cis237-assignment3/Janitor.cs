@@ -15,6 +15,7 @@ namespace cis237_assignment3
         private const decimal TRASH_COMPACTOR_PRICE = 250.00m;
         private const decimal VACUUM_PRICE = 150.00m;
 
+        private string model = "Janitor";
         private bool trashCompactor;
         private bool vacuum;
 
@@ -25,6 +26,11 @@ namespace cis237_assignment3
         public bool Vacuum
         {
             get { return vacuum; }
+        }
+        public override string Model
+        {
+            get { return model; }
+            set { model = value; }
         }
 
         public override void CalculateTotalCost()

@@ -40,7 +40,7 @@ namespace cis237_assignment3
         }
         public abstract string Model
         {
-            get;
+            get; set;
         }
         public string Color
         {
