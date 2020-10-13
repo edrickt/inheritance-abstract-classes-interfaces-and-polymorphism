@@ -61,10 +61,10 @@ namespace cis237_assignment3
         public override string ToString()
         {
             return "MODEL: " + model + Environment.NewLine +
-                    base.ToString() + Environment.NewLine +
+                    base.ToString() +
                     "TOOLBOX: " + toolBox.ToString() + Environment.NewLine +
                     "COMP. CON.: " + computerConnection.ToString() + Environment.NewLine +
-                    "ARMS: " + arms.ToString();
+                    "ARMS: " + arms.ToString() + Environment.NewLine;
                     
         }
 

@@ -36,8 +36,8 @@ namespace cis237_assignment3
         public override string ToString()
         {
             return "MODEL: " + model + Environment.NewLine + 
-                    base.ToString() + Environment.NewLine + 
-                    "# OF LANG: " + numberOfLanguages;
+                    base.ToString() +
+                    "# OF LANG: " + numberOfLanguages + Environment.NewLine;
         }
 
         public Protocol(string material, string color, int numberOfLanguages) : base(material, color)

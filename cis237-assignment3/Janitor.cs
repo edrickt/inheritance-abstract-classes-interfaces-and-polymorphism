@@ -49,9 +49,9 @@ namespace cis237_assignment3
 
         public override string ToString()
         {
-            return base.ToString() + Environment.NewLine +
+            return base.ToString() +
                    "TRASH COMPACTOR: " + trashCompactor.ToString() + Environment.NewLine +
-                   "VACUUM: " + vacuum.ToString();
+                   "VACUUM: " + vacuum.ToString() + Environment.NewLine;
         }
 
         public Janitor(string material, string color, bool toolBox, bool computerConnection,

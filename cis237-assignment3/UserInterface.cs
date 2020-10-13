@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace cis237_assignment3
 {
@@ -40,6 +41,11 @@ namespace cis237_assignment3
             Console.WriteLine("1. Add Droid");
             Console.WriteLine("2. Print List");
             Console.WriteLine("3. Exit");
+        }
+
+        public void Output(string outputString)
+        {
+            Console.WriteLine(outputString);
         }
     }
 }

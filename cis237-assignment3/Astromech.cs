@@ -47,9 +47,9 @@ namespace cis237_assignment3
 
         public override string ToString()
         {
-            return base.ToString() + Environment.NewLine +
+            return base.ToString() +
                    "FIRE EXTINGUISHER: " + fireExtinguisher.ToString() + Environment.NewLine +
-                   "NUMBER OF SHIPS: " + numberOfShips;
+                   "NUMBER OF SHIPS: " + numberOfShips + Environment.NewLine;
         }
 
         public Astromech (string material, string color, bool toolBox,
