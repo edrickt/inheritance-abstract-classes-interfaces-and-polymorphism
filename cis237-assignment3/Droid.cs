@@ -68,7 +68,7 @@ namespace cis237_assignment3
             return "BASE COST: $" + baseCost + Environment.NewLine +
                    "TOTAL COST: $" + totalCost + Environment.NewLine +
                    "MATERIAL: " + material + Environment.NewLine +
-                   "COLOR: " + color;
+                   "COLOR: " + color + Environment.NewLine;
         }
 
         // ****************************************

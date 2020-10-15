@@ -19,21 +19,7 @@ namespace cis237_assignment3
 
             string input = Console.ReadLine();
 
-            if (input == "1")
-            {
-                return "1";
-            }
-            else if (input == "2")
-            {
-                
-                return "2";
-            }
-            else if (input == "3")
-            {
-                Environment.Exit(0);
-                return "3";
-            }
-            return "-1";
+            return input;
         }
         private void PrintMenu()
         {
@@ -42,10 +28,229 @@ namespace cis237_assignment3
             Console.WriteLine("2. Print List");
             Console.WriteLine("3. Exit");
         }
-
         public void Output(string outputString)
         {
             Console.WriteLine(outputString);
+        }
+        public string SelectModel()
+        {
+            Console.Clear();
+            Console.WriteLine("Enter number corresponding with option and press ENTER" + Environment.NewLine + Environment.NewLine +
+                              "Model: " + Environment.NewLine +
+                              "1. Protocol" + Environment.NewLine +
+                              "2. Utility" + Environment.NewLine +
+                              "3. Astromech" + Environment.NewLine +
+                              "4. Janitor" + Environment.NewLine);
+
+            string choice = Console.ReadLine();
+            Console.Clear();
+
+            if (choice == "1")
+            {
+                return "Protocol";
+            }
+            else if (choice == "2")
+            {
+                return "Utility";
+            }
+            else if (choice == "3")
+            {
+                return "Astromech";
+            }
+            else if (choice == "4")
+            {
+                return "Janitor";
+            }
+            else
+            {
+                return "-1";
+            }
+        }
+        public string SelectMaterial()
+        {
+            Console.Clear();
+            Console.WriteLine("Enter number corresponding with option and press ENTER" + Environment.NewLine + Environment.NewLine +
+                             "Material: " + Environment.NewLine +
+                             "1. Aluminum" + Environment.NewLine +
+                             "2. Steel" + Environment.NewLine +
+                             "3. Titanium" + Environment.NewLine);
+
+            string choice = Console.ReadLine();
+            Console.Clear();
+
+            if (choice == "1")
+            {
+                return "Aluminum";
+            }
+            else if (choice == "2")
+            {
+                return "Steel";
+            }
+            else if (choice == "3")
+            {
+                return "Titanium";
+            }
+            else
+            {
+                return "-1";
+            }
+        }
+        public string SelectColor()
+        {
+            Console.Clear();
+            Console.WriteLine("Enter number corresponding with option and press ENTER" + Environment.NewLine + Environment.NewLine +
+                              "Color: " + Environment.NewLine +
+                              "1. Silver" + Environment.NewLine +
+                              "2. Black" + Environment.NewLine +
+                              "3. Gold" + Environment.NewLine);
+
+            string choice = Console.ReadLine();
+            Console.Clear();
+
+            if (choice == "1")
+            {
+                return "Silver";
+            }
+            else if (choice == "2")
+            {
+                return "Black";
+            }
+            else if (choice == "3")
+            {
+                return "Gold";
+            }
+            else
+            {
+                return "-1";
+            }
+        }
+        public int NumberOfLanguage()
+        {
+            Console.Clear();
+            Console.WriteLine("How many languages?" + Environment.NewLine +
+                              "Type a number without commas between 1-1000000" +
+                              Environment.NewLine);
+            int choice = Int32.Parse(Console.ReadLine());
+            Console.Clear();
+            return choice;
+        }
+        public int NumberOfShips()
+        {
+            Console.Clear();
+            Console.WriteLine("How many ships?" + Environment.NewLine +
+                              "Type a number without commas and press ENTER" +
+                              Environment.NewLine);
+            int choice = Int32.Parse(Console.ReadLine());
+            Console.Clear();
+            return choice;
+        }
+        public bool ToolBox()
+        {
+            Console.Clear();
+            Console.WriteLine("Add Tool Box?" + Environment.NewLine +
+                              "1. YES" + Environment.NewLine +
+                              "2. NO" + Environment.NewLine);
+            string choice = Console.ReadLine();
+            Console.Clear();
+            if (choice == "1")
+            {
+                return true;
+            }
+            else if (choice == "2")
+            {
+                return false;
+            }
+            return false;
+        }
+        public bool ComputerConnection()
+        {
+            Console.Clear();
+            Console.WriteLine("Add Computer Connection?" + Environment.NewLine +
+                              "1. YES" + Environment.NewLine +
+                              "2. NO" + Environment.NewLine);
+            string choice = Console.ReadLine();
+            Console.Clear();
+            if (choice == "1")
+            {
+                return true;
+            }
+            else if (choice == "2")
+            {
+                return false;
+            }
+            return false;
+        }
+        public bool Arms()
+        {
+            Console.Clear();
+            Console.WriteLine("Add Arms" + Environment.NewLine +
+                              "1. YES" + Environment.NewLine +
+                              "2. NO" + Environment.NewLine);
+            string choice = Console.ReadLine();
+            Console.Clear();
+            if (choice == "1")
+            {
+                return true;
+            }
+            else if (choice == "2")
+            {
+                return false;
+            }
+            return false;
+        }
+        public bool TrashCompactor()
+        {
+            Console.Clear();
+            Console.WriteLine("Add Trash Compactor?" + Environment.NewLine +
+                              "1. YES" + Environment.NewLine +
+                              "2. NO" + Environment.NewLine);
+            string choice = Console.ReadLine();
+            Console.Clear();
+            if (choice == "1")
+            {
+                return true;
+            }
+            else if (choice == "2")
+            {
+                return false;
+            }
+            return false;
+        }
+        public bool Vacuum()
+        {
+            Console.Clear();
+            Console.WriteLine("Add Vacuum?" + Environment.NewLine +
+                              "1. YES" + Environment.NewLine +
+                              "2. NO" + Environment.NewLine);
+            string choice = Console.ReadLine();
+            Console.Clear();
+            if (choice == "1")
+            {
+                return true;
+            }
+            else if (choice == "2")
+            {
+                return false;
+            }
+            return false;
+        }
+        public bool FireExtinguisher()
+        {
+            Console.Clear();
+            Console.WriteLine("Add Fire Extinguisher?" + Environment.NewLine +
+                              "1. YES" + Environment.NewLine +
+                              "2. NO" + Environment.NewLine);
+            string choice = Console.ReadLine();
+            Console.Clear();
+            if (choice == "1")
+            {
+                return true;
+            }
+            else if (choice == "2")
+            {
+                return false;
+            }
+            return false;
         }
     }
 }
