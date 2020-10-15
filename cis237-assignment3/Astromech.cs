@@ -16,7 +16,7 @@ namespace cis237_assignment3
         private const decimal FIRE_EXTINGUISHER_PRICE = 50.00m;
         private const decimal SHIP_PRICE = 120.00m;
 
-        private string model = "Astromech";
+        public string model = "Astromech";
         private bool fireExtinguisher;
         private int numberOfShips;
 
@@ -31,7 +31,6 @@ namespace cis237_assignment3
         public override string Model
         {
             get { return model; }
-            set { model = value; }
         }
 
         public override void CalculateTotalCost()

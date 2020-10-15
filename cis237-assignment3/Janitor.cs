@@ -30,9 +30,8 @@ namespace cis237_assignment3
         public override string Model
         {
             get { return model; }
-            set { model = value; }
+ 
         }
-
         public override void CalculateTotalCost()
         {
             base.CalculateTotalCost();

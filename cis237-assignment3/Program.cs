@@ -39,10 +39,11 @@ namespace cis237_assignment3
 
                     if (myDroids[0] == null)
                     {
-                        Console.WriteLine("LIST EMPTY" + Environment.NewLine);
+                        Console.WriteLine("LIST EMPTY" + Environment.NewLine + 
+                                          "Please add a droid first" + Environment.NewLine);
                     }
                     else
-                    {
+                    {     
                         foreach (IDroid droids in myDroids)
                         {
                             if (droids != null)
