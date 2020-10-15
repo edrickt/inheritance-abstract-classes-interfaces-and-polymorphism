@@ -142,121 +142,196 @@ namespace cis237_assignment3
         }
         public int NumberOfLanguage()
         {
-            Console.WriteLine("How many languages?" + Environment.NewLine +
-                              "Type a number without commas between 1-1000000" +
-                              Environment.NewLine);
-            int choice = Int32.Parse(Console.ReadLine());
-            Console.Clear();
-            return choice;
+            bool loop = true;
+            while (loop)
+            {
+                Console.WriteLine("How many languages?" + Environment.NewLine +
+                                  "Type a number without commas" +
+                                  Environment.NewLine);
+                try
+                {
+                    int choice = int.Parse(Console.ReadLine());
+                    Console.Clear();
+                    return choice;
+                }
+                catch
+                {
+                    Console.Clear();
+                    Console.WriteLine("PLEASE ENTER VALID INPUT");
+                }
+            }
+            return -1;
         }
         public int NumberOfShips()
         {
-            Console.WriteLine("How many ships?" + Environment.NewLine +
-                              "Type a number without commas and press ENTER" +
-                              Environment.NewLine);
-            int choice = Int32.Parse(Console.ReadLine());
-            Console.Clear();
-            return choice;
+            bool loop = true;
+            while (loop)
+            {
+                Console.WriteLine("How many ships?" + Environment.NewLine +
+                                  "Type a number without commas and press ENTER" +
+                                  Environment.NewLine);
+                try
+                {
+                    int choice = Int32.Parse(Console.ReadLine());
+                    Console.Clear();
+                    return choice;
+                }
+                catch
+                {
+                    Console.Clear();
+                    Console.WriteLine("PLEASE ENTER VALID INPUT");
+                }
+            }
+            return -1;
         }
         public bool ToolBox()
         {
-            Console.WriteLine("Add Tool Box?" + Environment.NewLine +
+            bool loop = true;
+            while (loop)
+            {
+                Console.WriteLine("Add Tool Box?" + Environment.NewLine +
                               "1. YES" + Environment.NewLine +
                               "2. NO" + Environment.NewLine);
-            string choice = Console.ReadLine();
-            Console.Clear();
-            if (choice == "1")
-            {
-                return true;
-            }
-            else if (choice == "2")
-            {
-                return false;
+                string choice = Console.ReadLine();
+                Console.Clear();
+
+                if (choice == "1")
+                {
+                    return true;
+                }
+                else if (choice == "2")
+                {
+                    return false;
+                }
+                else
+                {
+                    Console.WriteLine("PLEASE ENTER VALID INPUT"); ;
+                };
             }
             return false;
         }
         public bool ComputerConnection()
         {
-            Console.WriteLine("Add Computer Connection?" + Environment.NewLine +
+            bool loop = true;
+            while (loop)
+            {
+                Console.WriteLine("Add Computer Connection?" + Environment.NewLine +
                               "1. YES" + Environment.NewLine +
                               "2. NO" + Environment.NewLine);
-            string choice = Console.ReadLine();
-            Console.Clear();
-            if (choice == "1")
-            {
-                return true;
-            }
-            else if (choice == "2")
-            {
-                return false;
+                string choice = Console.ReadLine();
+                Console.Clear();
+                if (choice == "1")
+                {
+                    return true;
+                }
+                else if (choice == "2")
+                {
+                    return false;
+                }
+                else
+                {
+                    Console.WriteLine("PLEASE ENTER VALID INPUT"); ;
+                }
             }
             return false;
         }
         public bool Arms()
         {
-            Console.WriteLine("Add Arms" + Environment.NewLine +
+            bool loop = true;
+            while (loop)
+            {
+                Console.WriteLine("Add Arms" + Environment.NewLine +
                               "1. YES" + Environment.NewLine +
                               "2. NO" + Environment.NewLine);
-            string choice = Console.ReadLine();
-            Console.Clear();
-            if (choice == "1")
-            {
-                return true;
-            }
-            else if (choice == "2")
-            {
-                return false;
+                string choice = Console.ReadLine();
+                Console.Clear();
+                if (choice == "1")
+                {
+                    return true;
+                }
+                else if (choice == "2")
+                {
+                    return false;
+                }
+                else
+                {
+                    Console.WriteLine("PLEASE ENTER VALID INPUT"); ;
+                }
             }
             return false;
         }
         public bool TrashCompactor()
         {
-            Console.WriteLine("Add Trash Compactor?" + Environment.NewLine +
+            bool loop = true;
+            while (loop)
+            {
+                Console.WriteLine("Add Trash Compactor?" + Environment.NewLine +
                               "1. YES" + Environment.NewLine +
                               "2. NO" + Environment.NewLine);
-            string choice = Console.ReadLine();
-            Console.Clear();
-            if (choice == "1")
-            {
-                return true;
-            }
-            else if (choice == "2")
-            {
-                return false;
+                string choice = Console.ReadLine();
+                Console.Clear();
+                if (choice == "1")
+                {
+                    return true;
+                }
+                else if (choice == "2")
+                {
+                    return false;
+                }
+                else
+                {
+                    Console.WriteLine("PLEASE ENTER VALID INPUT"); ;
+                }
             }
             return false;
         }
         public bool Vacuum()
         {
-            Console.WriteLine("Add Vacuum?" + Environment.NewLine +
+            bool loop = true;
+            while (loop)
+            {
+                Console.WriteLine("Add Vacuum?" + Environment.NewLine +
                               "1. YES" + Environment.NewLine +
                               "2. NO" + Environment.NewLine);
-            string choice = Console.ReadLine();
-            Console.Clear();
-            if (choice == "1")
-            {
-                return true;
-            }
-            else if (choice == "2")
-            {
-                return false;
+                string choice = Console.ReadLine();
+                Console.Clear();
+                if (choice == "1")
+                {
+                    return true;
+                }
+                else if (choice == "2")
+                {
+                    return false;
+                }
+                else
+                {
+                    Console.WriteLine("PLEASE ENTER VALID INPUT"); ;
+                }
             }
             return false;
         }
         public bool FireExtinguisher()
         {
-            Console.WriteLine("Add Fire Extinguisher?" + Environment.NewLine +
+            bool loop = true;
+            while (loop)
+            {
+                Console.WriteLine("Add Fire Extinguisher?" + Environment.NewLine +
                               "1. YES" + Environment.NewLine +
                               "2. NO" + Environment.NewLine);
-            string choice = Console.ReadLine();
-            Console.Clear();
-            if (choice == "1")
-            {
-                return true;
-            }
-            else if (choice == "2")
-            {
-                return false;
+                string choice = Console.ReadLine();
+                Console.Clear();
+                if (choice == "1")
+                {
+                    return true;
+                }
+                else if (choice == "2")
+                {
+                    return false;
+                }
+                else
+                {
+                    Console.WriteLine("PLEASE ENTER VALID INPUT"); ;
+                }
             }
             return false;
         }

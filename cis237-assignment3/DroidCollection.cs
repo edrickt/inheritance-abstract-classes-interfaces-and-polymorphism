@@ -16,7 +16,7 @@ namespace cis237_assignment3
     {
         private string name;
         private decimal cost;
-
+        public static IDroid[] myDroids = new IDroid[100];
         public string Name
         {
             get { return name; }
@@ -27,16 +27,6 @@ namespace cis237_assignment3
             get { return cost; }
             set { cost = value; }
         }
-
-        //public static string[] protocol = { "Protocol", 600.00m.ToString() };
-        //public static string[] utility = { "Utility", 800.00m.ToString() };
-        //public static string[] astromech = { "Astromech", 1000.00m.ToString() };
-        //public static string[] janitor = { "Janitor", 700.00m.ToString() };
-
-        //public static string[] aluminum = { "Aluminum", 100.00m.ToString() };
-        //public static string[] steel = { "Steel", 150.00m.ToString() };
-        //public static string[] titanium = { "Titanium", 250.00m.ToString() };
-
         public static decimal FindModelCost(string model)
         {
             if (model == "Protocol")
@@ -73,7 +63,62 @@ namespace cis237_assignment3
             }
             return 0.00m;
         }
+        public static IDroid[] AddDroid(ref int index)
+        {
+            UserInterface ui = new UserInterface();
 
+            string model = ui.SelectModel();
+            string color = ui.SelectColor();
+            string material = ui.SelectMaterial();
+
+            if (model == "Utility")
+            {
+                bool toolBox = ui.ToolBox();
+                bool computerConnection = ui.ComputerConnection();
+                bool arms = ui.Arms();
+                myDroids[index] = new Utility(material, color, toolBox, computerConnection, arms);
+
+                index++;
+
+                return myDroids;
+            }
+            if (model == "Protocol")
+            {
+                int numberOfLanguages = ui.NumberOfLanguage();
+                myDroids[index] = new Protocol(material, color, numberOfLanguages);
+
+                index++;
+
+                return myDroids;
+            }
+            if (model == "Astromech")
+            {
+                bool toolBox = ui.ToolBox();
+                bool computerConnection = ui.ComputerConnection();
+                bool arms = ui.Arms();
+                bool fireExtinguisher = ui.FireExtinguisher();
+                int numberOfShips = ui.NumberOfShips();
+                myDroids[index] = new Astromech(material, color, toolBox, computerConnection, arms, fireExtinguisher, numberOfShips);
+
+                index++;
+
+                return myDroids;
+            }
+            if (model == "Janitor")
+            {
+                bool toolBox = ui.ToolBox();
+                bool computerConnection = ui.ComputerConnection();
+                bool arms = ui.Arms();
+                bool trashCompactor = ui.TrashCompactor();
+                bool vacuum = ui.Vacuum();
+                myDroids[index] = new Janitor(material, color, toolBox, computerConnection, arms, trashCompactor, vacuum);
+
+                index++;
+
+                return myDroids;
+            }
+            return myDroids;
+        }
         DroidCollection(string name, decimal cost)
         {
             name = Name;
