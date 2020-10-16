@@ -16,7 +16,7 @@ namespace cis237_assignment3
         private const decimal FIRE_EXTINGUISHER_PRICE = 50.00m;
         private const decimal SHIP_PRICE = 120.00m;
 
-        public string model = "Astromech";
+        private string model = "Astromech";
         private bool fireExtinguisher;
         private int numberOfShips;
 
