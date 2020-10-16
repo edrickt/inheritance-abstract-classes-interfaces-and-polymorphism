@@ -13,6 +13,10 @@ namespace cis237_assignment3
 {
     class UserInterface
     {
+        /// <summary>
+        /// Receive user input for menu
+        /// </summary>
+        /// <returns></returns>
         public string GetUserInput()
         {
             this.PrintMenu();
@@ -21,6 +25,9 @@ namespace cis237_assignment3
 
             return input;
         }
+        /// <summary>
+        /// Print menu
+        /// </summary>
         private void PrintMenu()
         {
             Console.WriteLine("OPTIONS:");
@@ -28,10 +35,18 @@ namespace cis237_assignment3
             Console.WriteLine("2. Print List");
             Console.WriteLine("3. Exit");
         }
+        /// <summary>
+        /// Output the list
+        /// </summary>
+        /// <param name="outputString"></param>
         public void Output(string outputString)
         {
             Console.WriteLine(outputString);
         }
+        /// <summary>
+        /// Menu to select model. Will return corresponding string
+        /// </summary>
+        /// <returns></returns>
         public string SelectModel()
         {
             Console.Clear();
@@ -74,6 +89,10 @@ namespace cis237_assignment3
             }
             return "-1";
         }
+        /// <summary>
+        /// Run menu for selecting material and returns it as string
+        /// </summary>
+        /// <returns></returns>
         public string SelectMaterial()
         {
             bool loop = true;
@@ -107,6 +126,10 @@ namespace cis237_assignment3
             }
             return "-1";
         }
+        /// <summary>
+        /// Runs menu to select color and returns it as string
+        /// </summary>
+        /// <returns></returns>
         public string SelectColor()
         {
             bool loop = true;
@@ -140,6 +163,10 @@ namespace cis237_assignment3
             }
             return "-1";
         }
+        /// <summary>
+        /// Run menu to select number of languages
+        /// </summary>
+        /// <returns></returns>
         public int NumberOfLanguage()
         {
             bool loop = true;
@@ -162,6 +189,10 @@ namespace cis237_assignment3
             }
             return -1;
         }
+        /// <summary>
+        /// Run menu to select number of ships
+        /// </summary>
+        /// <returns></returns>
         public int NumberOfShips()
         {
             bool loop = true;
@@ -184,6 +215,10 @@ namespace cis237_assignment3
             }
             return -1;
         }
+        /// <summary>
+        /// Run menu to select if Y/N toolbox
+        /// </summary>
+        /// <returns></returns>
         public bool ToolBox()
         {
             bool loop = true;
@@ -210,6 +245,10 @@ namespace cis237_assignment3
             }
             return false;
         }
+        /// <summary>
+        /// Run menu to select if Y/N computer connection
+        /// </summary>
+        /// <returns></returns>
         public bool ComputerConnection()
         {
             bool loop = true;
@@ -235,6 +274,10 @@ namespace cis237_assignment3
             }
             return false;
         }
+        /// <summary>
+        /// Run menu if Y/N for arms
+        /// </summary>
+        /// <returns></returns>
         public bool Arms()
         {
             bool loop = true;
@@ -260,6 +303,10 @@ namespace cis237_assignment3
             }
             return false;
         }
+        /// <summary>
+        /// Run menu if Y/N for trash compactor
+        /// </summary>
+        /// <returns></returns>
         public bool TrashCompactor()
         {
             bool loop = true;
@@ -285,14 +332,18 @@ namespace cis237_assignment3
             }
             return false;
         }
+        /// <summary>
+        /// Run menu if Y/N for vacuum
+        /// </summary>
+        /// <returns></returns>
         public bool Vacuum()
         {
             bool loop = true;
             while (loop)
             {
                 Console.WriteLine("Add Vacuum?" + Environment.NewLine +
-                              "1. YES" + Environment.NewLine +
-                              "2. NO" + Environment.NewLine);
+                                  "1. YES" + Environment.NewLine +
+                                  "2. NO" + Environment.NewLine);
                 string choice = Console.ReadLine();
                 Console.Clear();
                 if (choice == "1")
@@ -310,6 +361,10 @@ namespace cis237_assignment3
             }
             return false;
         }
+        /// <summary>
+        /// Run menu for Y/N for fire extinguisher
+        /// </summary>
+        /// <returns></returns>
         public bool FireExtinguisher()
         {
             bool loop = true;
