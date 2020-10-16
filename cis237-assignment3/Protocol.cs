@@ -17,10 +17,6 @@ namespace cis237_assignment3
         private string model = "Protocol";
         private int numberOfLanguages; 
 
-        public int NumberOfLanguages
-        {
-            get { return numberOfLanguages; }
-        }
         public override string Model
         {
             get { return model; }

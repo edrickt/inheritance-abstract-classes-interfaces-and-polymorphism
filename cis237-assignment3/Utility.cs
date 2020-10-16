@@ -22,19 +22,6 @@ namespace cis237_assignment3
         private bool computerConnection;
         private bool arms;
 
-        public bool ToolBox
-        {
-            get { return toolBox; }
-        }
-        public bool ComputerConnection
-        {
-            get { return computerConnection; }
-        }
-        public bool Arms
-        {
-            get { return arms; }
-        }
-
         public override string Model
         {
             get { return model; }

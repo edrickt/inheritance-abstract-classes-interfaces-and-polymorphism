@@ -20,14 +20,6 @@ namespace cis237_assignment3
         private bool fireExtinguisher;
         private int numberOfShips;
 
-        public bool FireExtinguisher
-        {
-            get { return fireExtinguisher; }
-        }
-        public int NumberOfShips
-        {
-            get { return numberOfShips; }
-        }
         public override string Model
         {
             get { return model; }

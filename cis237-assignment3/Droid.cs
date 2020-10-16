@@ -13,31 +13,25 @@ namespace cis237_assignment3
 {
     abstract class Droid : IDroid
     {
-        // ****************************************
-        // Variables
-        // ****************************************
         protected string material;
         protected string color;
         protected decimal baseCost;
         protected decimal totalCost;
 
-        // ****************************************
-        // Properties
-        // ****************************************
         public decimal TotalCost
         {
             get { return totalCost; }
             set { totalCost = value; }
-        }
-        public decimal BaseCost
-        {
-            get { return baseCost; }
         }
         public string Material
         {
             get { return material; }
             set { material = value; }
         }
+        /// <summary>
+        /// Abstract since each class model name is different
+        /// and needs to be overriden
+        /// </summary>
         public abstract string Model
         {
             get;
@@ -47,20 +41,27 @@ namespace cis237_assignment3
             get { return color; }
             set { color = value; }
         }
-
-        // ****************************************
-        // Public Methods
-        // ****************************************
-        protected virtual void CalculateBaseCost()
+        /// <summary>
+        /// Calculate base cost based on model and material
+        /// </summary>
+        protected void CalculateBaseCost()
         {
             baseCost = DroidCollection.FindMaterialCost(Material);
             baseCost += DroidCollection.FindModelCost(Model);
         }
+        /// <summary>
+        /// Made virtual because it is calculated differently in different
+        /// derived classes
+        /// </summary>
         public virtual void CalculateTotalCost()
         {
             totalCost = 0.0m;
             totalCost += baseCost;
         }
+        /// <summary>
+        /// Override ToString() to output features. Will calculate total cost here
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             CalculateTotalCost();
@@ -70,10 +71,11 @@ namespace cis237_assignment3
                    "MATERIAL: " + material + Environment.NewLine +
                    "COLOR: " + color + Environment.NewLine;
         }
-
-        // ****************************************
-        // Constructors
-        // ****************************************
+        /// <summary>
+        /// Base constructor
+        /// </summary>
+        /// <param name="material"></param>
+        /// <param name="color"></param>
         public Droid(string material, string color)
         {
             this.Material = material;
@@ -81,7 +83,5 @@ namespace cis237_assignment3
 
             CalculateBaseCost();
         }
-        public Droid()
-        { }
     }
 }

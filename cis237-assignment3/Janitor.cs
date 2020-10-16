@@ -19,14 +19,6 @@ namespace cis237_assignment3
         private bool trashCompactor;
         private bool vacuum;
 
-        public bool TrashCompactor
-        {
-            get { return trashCompactor; }
-        }
-        public bool Vacuum
-        {
-            get { return vacuum; }
-        }
         public override string Model
         {
             get { return model; }

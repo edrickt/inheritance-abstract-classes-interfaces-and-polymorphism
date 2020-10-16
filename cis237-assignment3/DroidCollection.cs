@@ -14,19 +14,12 @@ namespace cis237_assignment3
 {
     class DroidCollection
     {
-        private string name;
-        private decimal cost;
         public static IDroid[] myDroids = new IDroid[100];
-        public string Name
-        {
-            get { return name; }
-            set { name = value; }
-        }
-        public decimal Cost
-        {
-            get { return cost; }
-            set { cost = value; }
-        }
+        /// <summary>
+        /// Find cost of droid from the choice of model
+        /// </summary>
+        /// <param name="model">Model passed in from input</param>
+        /// <returns></returns>
         public static decimal FindModelCost(string model)
         {
             if (model == "Protocol")
@@ -47,6 +40,11 @@ namespace cis237_assignment3
             }
             return 0.00m;
         }
+        /// <summary>
+        /// Find price of material
+        /// </summary>
+        /// <param name="material">Input from user from interface</param>
+        /// <returns></returns>
         public static decimal FindMaterialCost(string material)
         {
             if (material == "Aluminum")
@@ -63,14 +61,22 @@ namespace cis237_assignment3
             }
             return 0.00m;
         }
+        /// <summary>
+        /// Add a droid to the list
+        /// </summary>
+        /// <param name="index">Pass in as ref to change number of index</param>
+        /// <returns></returns>
         public static IDroid[] AddDroid(ref int index)
         {
             UserInterface ui = new UserInterface();
 
+            // Assign these variables from the strings passed from methods
             string model = ui.SelectModel();
             string color = ui.SelectColor();
             string material = ui.SelectMaterial();
 
+            // If model matches droid, then run methods that is needed for droid, add to myDroids
+            // and return myDroids
             if (model == "Utility")
             {
                 bool toolBox = ui.ToolBox();
@@ -118,11 +124,6 @@ namespace cis237_assignment3
                 return myDroids;
             }
             return myDroids;
-        }
-        DroidCollection(string name, decimal cost)
-        {
-            name = Name;
-            cost = Cost;
         }
         DroidCollection()
         {
