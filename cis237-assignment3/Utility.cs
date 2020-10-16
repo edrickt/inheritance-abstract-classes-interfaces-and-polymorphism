@@ -22,11 +22,18 @@ namespace cis237_assignment3
         private bool computerConnection;
         private bool arms;
 
+        /// <summary>
+        /// Used to override model string
+        /// </summary>
         public override string Model
         {
             get { return model; }
         }
 
+        /// <summary>
+        /// Will calculate total cost according to options
+        /// chosen, plus base cost.
+        /// </summary>
         public override void CalculateTotalCost()
         {
             base.CalculateTotalCost();
@@ -44,6 +51,11 @@ namespace cis237_assignment3
                 totalCost += ARMS_PRICE;
             }
         }
+        /// <summary>
+        /// Overrides to string in order to add line for number of languages.
+        /// Get base.ToString() from base class.
+        /// </summary>
+        /// <returns></returns>
         public override string ToString()
         {
             return "MODEL: " + model + Environment.NewLine +
@@ -53,7 +65,14 @@ namespace cis237_assignment3
                     "ARMS: " + arms.ToString() + Environment.NewLine;
                     
         }
-
+        /// <summary>
+        /// Constructor for utility droid. Material and color is passed in from base class
+        /// </summary>
+        /// <param name="material"></param>
+        /// <param name="color"></param>
+        /// <param name="toolBox"></param>
+        /// <param name="computerConnection"></param>
+        /// <param name="arms"></param>
         public Utility(string material, string color, bool toolBox, bool computerConnection,
                        bool arms) : base(material, color)
         {
