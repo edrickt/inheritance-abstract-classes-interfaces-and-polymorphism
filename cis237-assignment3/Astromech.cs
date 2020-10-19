@@ -25,7 +25,7 @@ namespace cis237_assignment3
         /// </summary>
         public override string Model
         {
-            get { return model; }
+           get { return model;}
         }
         /// <summary>
         /// Will calculate total cost according to options

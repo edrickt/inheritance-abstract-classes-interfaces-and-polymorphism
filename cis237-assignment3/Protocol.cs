@@ -42,8 +42,7 @@ namespace cis237_assignment3
         /// <returns></returns>
         public override string ToString()
         {
-            return "MODEL: " + model + Environment.NewLine + 
-                    base.ToString() +
+            return  base.ToString() +
                     "# OF LANG: " + numberOfLanguages + Environment.NewLine;
         }
         /// <summary>

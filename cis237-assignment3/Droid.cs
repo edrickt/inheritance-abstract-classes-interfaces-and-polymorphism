@@ -66,8 +66,9 @@ namespace cis237_assignment3
         {
             CalculateTotalCost();
 
-            return "BASE COST: $" + baseCost + Environment.NewLine +
-                   "TOTAL COST: $" + totalCost + Environment.NewLine +
+            return "MODEL: " + Model + Environment.NewLine +
+                   "BASE COST: " + baseCost.ToString("C") + Environment.NewLine +
+                   "TOTAL COST: " + totalCost.ToString("C") + Environment.NewLine +
                    "MATERIAL: " + material + Environment.NewLine +
                    "COLOR: " + color + Environment.NewLine;
         }
