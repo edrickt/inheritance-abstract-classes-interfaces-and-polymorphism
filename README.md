@@ -135,4 +135,4 @@ No outside resources used except for inClass 3
 
 ## Known Problems, Issues, And/Or Errors in the Program
 
-Astromech and Janitor droids model string is still showing as Utility
+No known bugs
